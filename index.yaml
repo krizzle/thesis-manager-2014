@@ -21,3 +21,9 @@ indexes:
   properties:
   - name: date
     direction: desc
+
+- kind: Greeting2
+  ancestor: yes
+  properties:
+  - name: date
+    direction: desc

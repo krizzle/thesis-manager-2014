@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
-	<title>Advisers Manager</title>
+	<title>Oops!</title>
 </head>
 <body>
 	<table class="header" width="100%" cellpadding="10">
@@ -40,34 +40,22 @@
 		</tr>
 		<tr>
 			<td>
-				<li><a href="/adviser/list"><strong>Advisers Manager</strong></a></li>
+				<li><a href="/adviser/list">Advisers Manager</a></li>
 			</td>
 		</tr>
 		</ul>
 	</table>
-	{% for advise in all_advise %}
-		{% if urlid|string == advise.key.id()|string %}
-			<table class="mainbar">
-			<tr><td>
-			{{ advise.nametitle }} {{ advise.firstname }} {{ advise.lastname }}<br>{{ advise.dept }} Department
-			</td></tr>
-			</table>
-			<table class="listbar">
-			<tr><td>
-			<table style="width: 350px" class="center">
-			<tr><td class="margin">
-			Email Address:</td><td class="margin">{{ advise.email }}
-			</td></tr>
-			<tr><td class="margin">
-			Phone Number:</td>
-			<td class="margin">
-			{{ advise.phone }}
-			</td></tr>
-			</table>
-			</td></tr>
-			<tr><td><p align="right"><a class="btn" href="/adviser/edit/{{ advise.key.id() }}">Edit</a><a class="btn" href="/adviser/list">Back</a></p></td></tr>
-			</table>
-		{% endif %}
-	{% endfor %}
+	<table class="mainbar">
+	<tr><td>
+	<center>You need to log in to continue!</center>
+	</td></tr>
+	</table>
+	<table class="listbar">
+	<tr>
+	<td>
+		<center><a class="btn" href="{{url|safe}}">{{urlname}}</a></center>
+	</td>
+	</tr>
+	</table>
 </body>
 </html>

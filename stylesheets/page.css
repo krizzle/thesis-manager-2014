@@ -3,9 +3,6 @@
     background: rgba(155,2,17,.5);
     width:100%;
     margin:0px auto;
-    top:0px;
-    padding-left: 15px;
-    padding-top: 15px;
 }
 .sidebar {
 	font-size: 15px;
@@ -70,7 +67,7 @@ a {
 .list td a:hover{
     color: black;
 }
-.list tr:hover{
+.list tr a:hover{
     background-color: rgba(228,255,255,0.6);
 }
 .list{
@@ -81,6 +78,50 @@ a {
 }
 .align {
 	text-align: center;
+}
+.bttn {
+	-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #4197ee) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #4197ee 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#4197ee');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:13px;
+	-moz-border-radius-topleft:13px;
+	border-top-left-radius:13px;
+	-webkit-border-top-right-radius:13px;
+	-moz-border-radius-topright:13px;
+	border-top-right-radius:13px;
+	-webkit-border-bottom-right-radius:13px;
+	-moz-border-radius-bottomright:13px;
+	border-bottom-right-radius:13px;
+	-webkit-border-bottom-left-radius:13px;
+	-moz-border-radius-bottomleft:13px;
+	border-bottom-left-radius:13px;
+	text-indent:0px;
+	border:1px solid #469df5;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+	height:29px;
+	line-height:26px;
+	width:101px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #287ace;
+}
+.bttn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4197ee), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #4197ee 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4197ee', endColorstr='#79bbff');
+	background-color:#4197ee;
+}.bttn:active {
+	position:relative;
+	top:1px;
 }
 .btn {
 	-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;

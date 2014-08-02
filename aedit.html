@@ -5,9 +5,16 @@
 	<title>Advisers Manager</title>
 </head>
 <body>
-	<div class="header">
-		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
-	</div>
+	<table class="header" width="100%" cellpadding="10">
+	<col width= "20%">
+	<col width= "75%">
+	<col width= "5%"
+	<tr><td>
+	<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</td><td align="right">
+	<a>{{name}}</a></td>
+	<td><a href="{{url|safe}}">{{urlname}}</a></td></tr>
+	</table>
 	<br>
 	<table class="sidebar">
 		<tr>
@@ -110,7 +117,7 @@
 	</tr>
 	<tr>
 		<td></td><td></td>
-		<td><p align="right"><input class="btn" type="submit" value="Save"><a class="btn" href="/adviser/list">Cancel</a></p></td>
+		<td><p align="right"><input class="bttn" type="submit" value="Save"><a class="btn" href="/adviser/list">Cancel</a></p></td>
 	</tr>
 	</form>
 		{% endif %}

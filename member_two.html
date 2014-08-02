@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+ 	<meta charset="utf-8">
+ 	<title>Krizzle Avanceña</title>
+ 	<style type="text/css">
+ 		*{
+ 			vertical-align: top;
+ 		}
+ 		body{
+ 			background-color: green;
+ 			background-image: url('/image/kk.jpg');
+ 			margin:0px;
+ 		}
+		.header {
+			height:38px;
+    		background: rgba(155,2,17,.5);
+    		width:100%;
+    		margin:0px auto;
+   			font-family: Century Gothic;
+   			color: white;
+	 		}
+			.header a {
+			text-decoration: none;
+			color: white;
+			}
+			.header a:hover {
+				text-shadow: 0 0 10px white;
+			}
+ 		.container div{
+ 			display: inline-block;
+ 			padding: 4px;
+ 		}
+ 		.container{
+ 			width: 1024px;
+ 			margin: 0 auto;
+ 			
+ 		}
+ 		.container > .containerLeft, .container > .containerRight{
+ 			display: inline-block;
+ 		}
+ 		.container > .containerLeft{
+ 			width: 228px;
+ 		}
+ 		.container > .containerRight{
+ 			width: 775px;
+ 		}
+ 		.profileName{
+ 			margin-top: 90px;
+ 			text-align: center;
+ 			font-family: "Kristen ITC";
+ 			font-size: 48px;
+ 			position: absolute;
+ 			float: right;
+ 			margin-left: -270px;
+ 			top:10px;
+ 			border: 0 !important;
+ 			background: 0 !important;
+ 		}
+ 		.profilePic, .profileAbout{
+ 			margin-top:100px;	
+ 		}
+ 		.profilePic{
+ 			padding: 0 !important;
+ 			width: 215px; 
+ 			height: 215px;
+ 			margin-bottom: 95px;
+ 			overflow: hidden;
+ 			border: 1px #006666 solid;
+ 			border-radius: 50%;
+ 		}
+ 		[class^=profile]{
+ 			border: 2px #006666 dashed;
+ 			margin-bottom: 10px;
+ 			width: 97%;
+ 			background-color: rgba(255,255,255,0.2); 
+ 		}
+ 		.profileAbout{
+ 			height: 290px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.profileImage{
+ 			height: 150px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.profileTag{
+ 			height: 150px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.profileInfo{
+ 			height: 250px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.profileLinks{
+ 			height: 50px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.profileGuestbook{
+ 			min-height: 500px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.Be
+ 		{
+ 			font-size: 36px;
+ 			font-family: "Berlin Sans FB"
+ 		}
+ 		.Tag
+ 		{
+ 			font-size: 36px;	
+ 		}
+ 		.Info
+ 		{
+ 		font-size: 18px;	
+ 		}
+ 		.b1 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:19px;
+	-moz-border-radius-topleft:19px;
+	border-top-left-radius:19px;
+	-webkit-border-top-right-radius:19px;
+	-moz-border-radius-topright:19px;
+	border-top-right-radius:19px;
+	-webkit-border-bottom-right-radius:19px;
+	-moz-border-radius-bottomright:19px;
+	border-bottom-right-radius:19px;
+	-webkit-border-bottom-left-radius:19px;
+	-moz-border-radius-bottomleft:19px;
+	border-bottom-left-radius:19px;
+	text-indent:0;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:28px;
+	line-height:28px;
+	width:161px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
+}
+.b1:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
+}.b1:active {
+	position:relative;
+	top:1px;
+}
+.a1 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #caefab;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #caefab;
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77d42a), color-stop(1, #5cb811) );
+	background:-moz-linear-gradient( center top, #77d42a 5%, #5cb811 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77d42a', endColorstr='#5cb811');
+	background-color:#77d42a;
+	-webkit-border-top-left-radius:19px;
+	-moz-border-radius-topleft:19px;
+	border-top-left-radius:19px;
+	-webkit-border-top-right-radius:19px;
+	-moz-border-radius-topright:19px;
+	border-top-right-radius:19px;
+	-webkit-border-bottom-right-radius:19px;
+	-moz-border-radius-bottomright:19px;
+	border-bottom-right-radius:19px;
+	-webkit-border-bottom-left-radius:19px;
+	-moz-border-radius-bottomleft:19px;
+	border-bottom-left-radius:19px;
+	text-indent:0;
+	border:1px solid #268a16;
+	display:inline-block;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:28px;
+	line-height:28px;
+	width:116px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #aade7c;
+}
+.a1 {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5cb811), color-stop(1, #77d42a) );
+	background:-moz-linear-gradient( center top, #5cb811 5%, #77d42a 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5cb811', endColorstr='#77d42a');
+	background-color:#5cb811;
+}.a1 {
+	position:relative;
+	top:1px;
+}
+.headers a {
+	text-decoration: none;
+	color: white;
+}
+.headers a:hover {
+	text-shadow: 0 0 10px white;
+}
+ 	</style>
+</head>
+ <body>
+<table class="header" width="100%" cellpadding="10">
+	<col width= "25%">
+	<col width= "70%">
+	<col width= "5%"
+	<tr><td>
+	<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Personal Webpage</a>
+	</td><td align="right">
+	<a>{{name}}</a></td>
+	<td><a href="{{url|safe}}">{{urlname}}</a></td></tr>
+	</table><br>
+ 	<div class="container">
+ 		<div class="containerLeft">
+ 			<div class="profilePic" >
+ 				<img src="/image/k.jpg" alt="/image/k.jpg" width="235" height="285">
+ 			</div>
+ 			<div class="profileTag"> <br> <b>Tagline:</b> <br> 
+ 				<center><span class="Tag"> Eat Before You Sleep!</span></center>
+ 			</div>
+ 			
+
+
+ 			<div class="profileInfo"> <br> <b>Information:</b> <br> <br>
+ 				<center><span class="Info">Birthdate: March 15, 1994 <br>
+ 				Contact No: 09051144458 <br>
+ 				Email Address: krizzle015@gmail.com
+ 				krizzle1994@yahoo.com</span></center>
+
+ 				
+ 			</div>
+ 			<div class="profileLinks"> <b>Links:</b>:
+ 				<div>
+ 					<a href= "https://www.facebook.com/zlepogi"> <img src="/image/kkk.gif" width= "48" height="48"></a>
+ 					<a href="https://plus.google.com/u/0/115931758005522948919/posts"> <img src="/image/+.jpg" width= "48" height="48"></a>
+ 					<a href= "http://www.codecademy.com/tagNinja79467"> <img src="/image/c.jpg" width= "48" height="48"> </a>
+ 				</div>
+ 			</div>
+ 		</div>
+ 		<div class="containerRight">
+ 			<div class="profileName"><b>K</b>rizzle <b>A.</b> <b>A</b>vanceña</div>
+ 			<div class="profileAbout">  <br>
+ 				<b>About Me:</b>
+ 				<br>
+ 				<br>
+
+ 				<center><span class="Be">Fifth Year, Computer Engineering student
+ 				and <br> <br>I'm so <b>SEXY</b>!!!</span></center>
+ 			</div>
+
+ 			<div class="profileImage"> <b>Pictures:</b><br>
+ 				<img src="/image/n.jpg" width= "165px" height= "130px">
+ 				<img src="/image/m.jpg" width= "165px" height= "130px">
+ 				<img src="/image/b.jpg" width= "165px" height= "130px">
+ 				<img src="/image/v.jpg" width= "165px" height= "130px">
+
+ 			</div>
+ 			<div class="profileGuestbook"><br><b>Guestbook:</b><br>
+ 				{% for greeting2 in greetings2 %}
+      {% if greeting2.author %}
+        <b>{{ greeting2.author.nickname() }}</b> wrote:
+      {% else %}
+       An anonymous person wrote:
+      {% endif %}
+      <blockquote>{{ greeting2.content }}</blockquote>
+    {% endfor %}
+
+    <form action="/sign2?guestbook_name2={{ guestbook_name2 }}" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div><br>
+      <div><input class="b1" type="submit" value="Say Something Yo!"><a href="{{ url2|safe }}", class="a1">{{ url_linktext2 }}</a></div>
+    </form>
+
+    
+ 			</div>
+ 		</div>
+ 	</div>
+ </body>
+</html> 
+{% endautoescape %}

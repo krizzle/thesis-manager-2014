@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/html.css"/>
+	<title>James Bryan Cruz</title>
+</head>
+<body>
+<table class="header" width="100%" cellpadding="10">
+	<col width= "25%">
+	<col width= "70%">
+	<col width= "5%"
+	<tr><td>
+	<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Personal Webpage</a>
+	</td><td align="right">
+	<a>{{name}}</a></td>
+	<td><a href="{{url|safe}}">{{urlname}}</a></td></tr>
+	</table><br>
+	<font>
+	<table class="center">
+	<col width="50">
+	<col width="700">
+	<tr>
+		<td class="frame1", class="side", rowspan="4">
+		<table>
+			<tr>
+				<td>
+					<img src="/image/avatar.jpg", class="avatar"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Male, 21, Single<br>
+					Lives in <strong>Manila, Philippines</strong><br>
+					Born on <strong>April 20,1993</strong>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Studying <strong>BS Computer Engineering</strong> at the<br>
+					<strong>Polytechnic University of the Philippines</strong>,<br>
+					Sta. Mesa, Manila
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Social Networking Sites:<br><br>
+					<center><a href="https://www.facebook.com/engrjabo", target="_blank"><img src="/image/fb.jpg", class="circle"/></a>
+					<a href="https://twitter.com/engrjabo", target="_blank"><img src="/image/twitter.jpg", class="circle"/></a>
+					<a href="http://instagram.com/engrjabo", target="_blank"><img src="/image/insta.jpg", class="circle"/></a>
+					<a href="http://www.codecademy.com/jabocruz", target="_blank"><img src="/image/code.jpg", class="circle"/></a>
+					<a href="https://github.com/jabocruz", target="_blank"><img src="/image/git.jpg", class="circle"/></a></center>
+				</td>
+			</tr>
+		</table>
+		</td>
+		<td class="name">
+			<font size="32"><span>J</span>ames <span>B</span>ryan <span>C</span>ubacub <span>C</span>ruz</font>
+		</td>
+	</tr>
+	<tr>
+		<td class="frame2">
+			<p>Hi! Thank you for visiting my page. I'm JB. People find me to be a serious person but I enjoy meeting new people and spending great time with them. Looking forward to meet you soon! :)</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<font size="12">Photos</font><hr>
+			<center><img src="/image/1.jpg"/>
+			<img src="/image/2.jpg"/>
+			<img src="/image/3.jpg"/>
+			<img src="/image/4.jpg"/>
+			<img src="/image/5.jpg"/>
+			<img src="/image/6.jpg"/><br>
+			<img src="/image/7.jpg"/>
+			<img src="/image/8.jpg"/>
+			<img src="/image/9.jpg"/>
+			<img src="/image/10.jpg"/>
+			<img src="/image/11.jpg"/>
+			<img src="/image/12.jpg"/></center>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<font size="16">Contact Details</font><hr>
+			Mobile no.: (+63)9327764908<br>
+			Email address: engrjabo@gmail.com
+		</td>
+	</tr>
+	</table>
+	</font>
+<br>
+
+<table class="guestbook">
+<tr>
+<td>
+
+<marquee behavior="alternate", scrollamount="3"><strong>Comment here!!</strong></marquee>
+
+    {% for greeting1 in greetings1 %}
+      {% if greeting1.author %}
+        <b>{{ greeting1.author.nickname() }}</b> commented:
+      {% else %}
+       Anonymous person commented:
+      {% endif %}
+      <blockquote>{{ greeting1.content }}</blockquote>
+    {% endfor %}
+
+    <form action="/sign1?guestbook_name1={{ guestbook_name1 }}" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <center><div><input class="a" type="submit" value="Comment"></div></center>
+    </form>
+
+    <hr>
+    <center><a href="{{ url1|safe }}", class="c">{{ url_linktext1 }}</a></center>
+</td>
+</tr>
+</table>
+</body>
+</html>
+{% endautoescape %}
