@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+	<title>Advisers Manager</title>
+</head>
+<body>
+	<div class="header">
+		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</div>
+	<br>
+	<table class="sidebar">
+		<tr>
+			<td>
+				<center><strong>Records Manager</strong></center>
+			</td>
+		</tr>
+		<ul>
+		<tr>
+			<td>
+				<li><a href="/records">Home</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/student/list">Students Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/thesis/list">Thesis Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/adviser/list"><strong>Advisers Manager</strong></a></li>
+			</td>
+		</tr>
+		</ul>
+	</table>
+	<table class="mainbar">
+	<tr><td>
+	Adviser List
+	</td></tr>
+	</table>
+	<table class="listbar">
+	<tr><td>
+	<table style="width: 350px" class="list">
+	<col width="200">
+	<col width="100">
+	<tr>
+	<th>Name of Adviser</th>
+	<th>Department</th>
+	</tr>
+	{% for adviserr in all_adviser %}
+	<tr>
+	<td class="margin"><a href="/adviser/view/{{adviserr.key.id()}}">{{adviserr.nametitle}} {{adviserr.firstname}} {{adviserr.lastname}}</a></td>
+	<td class="align"><a href="/adviser/view/{{adviserr.key.id()}}">{{adviserr.dept}}</a></td>
+	</tr>
+	{% endfor %}
+	</table>
+	</td>
+	<tr>
+		<td colspan="2"><p align="right"><a class="btn" href="/adviser/new">Add</a></p></td>
+	</tr>
+	</tr>
+	</table>
+</body>
+</html>

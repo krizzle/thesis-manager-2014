@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+    <title>Thesis Manager</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+    </div>
+    <br>
+    <table class="sidebar">
+        <tr>
+            <td>
+                <center><strong>Records Manager</strong></center>
+            </td>
+        </tr>
+        <ul>
+        <tr>
+            <td>
+                <li><a href="/records">Home</a></li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <li><a href="/student/list">Students Manager</a></li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <li><a href="/thesis/list"><strong>Thesis Manager</strong></a></li>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <li><a href="/adviser/list">Advisers Manager</a></li>
+            </td>
+        </tr>
+        </ul>
+    </table>
+    {% for thesi in all_thesi %}
+        {% if urlid|string == thesi.key.id()|string %}
+            <table class="mainbar">
+            <tr><td>
+            {{ thesi.title }}<br>SY. {{ thesi.year }}
+            </td></tr>
+            </table>
+            <table class="listbar">
+            <col width="200">
+            <col width="800">
+            <tr><td class="margin">
+            Status:</td><td class="margin">{{ thesi.status }}
+            </td></tr>
+            <tr><td class="margin">
+            Description:</td>
+            <td class="margin">
+            {{ thesi.description }}
+            </td></tr>
+            <tr><td colspan="2"><p align="right"><a class="btn" href="/thesis/edit/{{ thesi.key.id() }}">Edit</a><a class="btn" href="/thesis/list">Back</a></p></td></tr>
+            </table>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

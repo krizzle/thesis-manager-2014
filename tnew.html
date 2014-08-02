@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+	<title>Thesis Manager</title>
+</head>
+<body>
+	<div class="header">
+		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</div>
+	<br>
+	<table class="sidebar">
+		<tr>
+			<td>
+				<center><strong>Records Manager</strong></center>
+			</td>
+		</tr>
+		<ul>
+		<tr>
+			<td>
+				<li><a href="/records">Home</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/student/list">Students Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/thesis/list"><strong>Thesis Manager</strong></a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/adviser/list">Advisers Manager</a></li>
+			</td>
+		</tr>
+		</ul>
+	</table>
+	<table class="mainbar">
+		<tr>
+			<td>
+				Add Thesis
+			</td>
+		</tr>
+	</table>
+	<table class="listbar">
+	<tr><td>
+	<table class="center">
+	<form method="post" action="/thesis/new">
+	<tr>
+		<td>
+		<strong>Thesis Title:</strong>
+		</td>
+		<td>
+		<center><input type="text" size="131" name="title"></center>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<strong>Description:</strong>
+		</td>
+		<td>
+		<textarea rows="4" cols="100" name="description"></textarea>
+		</td>
+	<tr>
+		<td>
+		<strong>School Year:</strong>
+		</td>
+		<td>
+		<select name="year">
+		<option value="2000-01">2000-01</option>
+		<option value="2001-02">2001-02</option>
+		<option value="2002-03">2002-03</option>
+		<option value="2003-04">2003-04</option>
+		<option value="2004-05">2004-05</option>
+		<option value="2005-06">2005-06</option>
+		<option value="2006-07">2006-07</option>
+		<option value="2007-08">2007-08</option>
+		<option value="2008-09">2008-09</option>
+		<option value="2009-10">2009-10</option>
+		<option value="2010-11">2010-11</option>
+		<option value="2011-12">2011-12</option>
+		<option value="2012-13">2012-13</option>
+		<option value="2013-14">2013-14</option>
+		<option value="2014-15">2014-15</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<strong>Status:</strong>
+		</td>
+		<td>
+		<input type="radio" name="status" value="In Progress" checked="checked">In Progress<br>
+		<input type="radio" name="status" value="Passed">Passed<br>
+		<input type="radio" name="status" value="Failed">Failed
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><p align="right"><input class="btn" type="submit"><a class="btn" href="/thesis/list">Cancel</a></p></td>
+	</tr>
+	</form>
+	</table>
+	</td></tr>
+	</table>
+</body>
+</html>

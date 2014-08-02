@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+	<title>Advisers Manager</title>
+</head>
+<body>
+	<div class="header">
+		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</div>
+	<br>
+	<table class="sidebar">
+		<tr>
+			<td>
+				<center><strong>Records Manager</strong></center>
+			</td>
+		</tr>
+		<ul>
+		<tr>
+			<td>
+				<li><a href="/records">Home</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/student/list">Students Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/thesis/list">Thesis Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/adviser/list"><strong>Advisers Manager</strong></a></li>
+			</td>
+		</tr>
+		</ul>
+	</table>
+	{% for advise in all_advise %}
+		{% if urlid|string == advise.key.id()|string %}
+			<table class="mainbar">
+			<tr><td>
+			{{ advise.nametitle }} {{ advise.firstname }} {{ advise.lastname }}<br>{{ advise.dept }} Department
+			</td></tr>
+			</table>
+			<table class="listbar">
+			<tr><td>
+			<table style="width: 350px" class="center">
+			<tr><td class="margin">
+			Email Address:</td><td class="margin">{{ advise.email }}
+			</td></tr>
+			<tr><td class="margin">
+			Phone Number:</td>
+			<td class="margin">
+			{{ advise.phone }}
+			</td></tr>
+			</table>
+			</td></tr>
+			<tr><td><p align="right"><a class="btn" href="/adviser/edit/{{ advise.key.id() }}">Edit</a><a class="btn" href="/adviser/list">Back</a></p></td></tr>
+			</table>
+		{% endif %}
+	{% endfor %}
+</body>
+</html>

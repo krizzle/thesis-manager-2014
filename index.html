@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+  <title>Team 13 Guestbook</title>
+  <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+</head>
+<body>
+<div class="headers">
+<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Guestbook</a>
+</div><br>
+<table class="guestbook">
+<tr>
+<td><center>Module 1:</center>
+</td>
+</tr>
+<tr>
+<td><center><a href="/module-1/1", target="_blank">James Bryan Cruz</a></center></td>
+</tr>
+<tr><td><center><a href="/module-1/2", target="_blank">Krizzle Avanceña</a></center></td>
+</tr>
+<tr>
+<td><br><center>Module 2:</center>
+</td>
+</tr>
+<tr>
+<td><center><a href="/records", target="_blank">Records Manager</a></center></td>
+</tr>
+</table>
+<br>
+<table class="guestbook">
+<tr>
+<td>
+  <center><form>Guestbook name:
+      <input value="{{ guestbook_name }}" name="guestbook_name">
+      <input class="b" type="submit" value="Switch">
+    </form></center>
+    <hr>
+
+<marquee behavior="alternate", scrollamount="3"><strong>Sign here!!</strong></marquee>
+
+    {% for greeting in greetings %}
+      {% if greeting.author %}
+        <b>{{ greeting.author.nickname() }}</b> wrote:
+      {% else %}
+       An anonymous person wrote:
+      {% endif %}
+      <blockquote>{{ greeting.content }}</blockquote>
+    {% endfor %}
+
+    <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+      <div><textarea name="content" rows="3" cols="60"></textarea></div>
+      <center><div><input class="a" type="submit" value="Sign Guestbook"></div></center>
+    </form>
+
+    <hr>
+    <center><a href="{{ url|safe }}", class="c">{{ url_linktext }}</a></center>
+</td>
+</tr>
+</table>
+
+  </body>
+</html>
+{% endautoescape %}

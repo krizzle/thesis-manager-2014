@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+	<title>Advisers Manager</title>
+</head>
+<body>
+	<div class="header">
+		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</div>
+	<br>
+	<table class="sidebar">
+		<tr>
+			<td>
+				<center><strong>Records Manager</strong></center>
+			</td>
+		</tr>
+		<ul>
+		<tr>
+			<td>
+				<li><a href="/records">Home</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/student/list">Students Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/thesis/list">Thesis Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/adviser/list"><strong>Advisers Manager</strong></a></li>
+			</td>
+		</tr>
+		</ul>
+	</table>
+	<table class="mainbar">
+	<tr><td>
+	Edit Adviser
+	</td></tr>
+	</table>
+	<table class="listbar">
+	<tr><td>
+	<table class="center">
+	{% for s in all_adviser %}
+		{% if urlid|string == s.key.id()|string %}
+	<form method="post" action="/adviser/edit/{{ s.key.id() }}">
+	
+	<tr>
+		<td>
+		<strong>Name:</strong>
+		<select name="nametitle">
+		<option value="Mr.">Mr.</option>
+		<option value="Ms.">Ms.</option>
+		<option value="Mrs.">Mrs.</option>
+		<option value="Dr.">Dr.</option>
+		<option value="Engr.">Engr.</option>
+		<option value="Atty.">Atty.</option>
+		</select>
+		</td>
+		<td>
+		<center><input type="text" name="firstname" value="{{ s.firstname }}"></center>
+		</td>
+		<td>
+		<center><input type="text" name="lastname" value="{{ s.lastname }}"></center>
+		</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<center><strong>First Name</strong></center>
+	</td>
+	<td>
+	<center><strong>Last Name</strong></center>
+	</td>
+	</tr>
+	<tr>
+		<td>
+		<strong>Department:</strong>
+		</td>
+		<td>
+		<select name="dept">
+		<option value="CE">CE</option>
+		<option value="ME">ME</option>
+		<option value="CpE">CpE</option>
+		<option value="EE">EE</option>
+		<option value="ECE">ECE</option>
+		<option value="IE">IE</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<strong>Email Address:</strong>
+		</td>
+		<td>
+		<input type="email" name="email" value="{{ s.email }}">
+		</td>
+	<tr>
+		<td>
+		<strong>Phone Number:</strong>
+		</td>
+		<td>
+		<input type="text" name="phone" value="{{ s.phone }}">
+		</td>
+	</tr>
+	<tr>
+		<td></td><td></td>
+		<td><p align="right"><input class="btn" type="submit" value="Save"><a class="btn" href="/adviser/list">Cancel</a></p></td>
+	</tr>
+	</form>
+		{% endif %}
+	{% endfor %}
+	</table>
+	</td></tr>
+	</table>
+</body>
+</html>

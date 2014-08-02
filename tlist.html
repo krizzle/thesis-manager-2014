@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+	<title>Thesis Manager</title>
+</head>
+<body>
+	<div class="header">
+		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</div>
+	<br>
+	<table class="sidebar">
+		<tr>
+			<td>
+				<center><strong>Records Manager</strong></center>
+			</td>
+		</tr>
+		<ul>
+		<tr>
+			<td>
+				<li><a href="/records">Home</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/student/list">Students Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/thesis/list"><strong>Thesis Manager</strong></a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/adviser/list">Advisers Manager</a></li>
+			</td>
+		</tr>
+		</ul>
+	</table>
+	<table class="mainbar">
+		<tr>
+			<td>
+				Thesis List
+			</td>
+		</tr>
+	</table>
+	<table class="listbar">
+	<tr><td>
+	<table class="list">
+	<col width="350">
+	<col width="150">
+	<tr>
+	<th>Thesis Title</th>
+	<th>School Year</th>
+	</tr>
+	{% for thesiss in all_thesis %}
+	<tr>
+	<td class="margin"><a href="/thesis/view/{{thesiss.key.id()}}">{{thesiss.title}}</a></td>
+	<td class="align"><a href="/thesis/view/{{thesiss.key.id()}}">{{thesiss.year}}</a></td>
+	</tr>
+	{% endfor %}
+	</table>
+	</td>
+	<tr>
+		<td colspan="4"><p align="right"><a class="btn" href="/thesis/new">Add</a></p></td>
+	</tr>
+	</tr>
+	</table>
+	<center></center>
+</body>
+</html>

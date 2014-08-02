@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link type="text/css", rel="stylesheet", href="/stylesheets/page.css"/>
+	<title>Students Manager</title>
+</head>
+<body>
+	<div class="header">
+		<a href="http://coe2043-team-13.appspot.com"><strong>Team 13</strong> Records Manager</a>
+	</div>
+	<br>
+	<table class="sidebar">
+		<tr>
+			<td>
+				<center><strong>Records Manager</strong></center>
+			</td>
+		</tr>
+		<ul>
+		<tr>
+			<td>
+				<li><a href="/records">Home</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/student/list"><strong>Students Manager</strong></a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/thesis/list">Thesis Manager</a></li>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<li><a href="/adviser/list">Advisers Manager</a></li>
+			</td>
+		</tr>
+		</ul>
+	</table>
+	<table class="mainbar">
+	<tr><td>
+	Edit Student
+	</td></tr>
+	</table>
+	<table class="listbar">
+	<tr><td>
+	<table class="center">
+	{% for s in all_student %}
+		{% if urlid|string == s.key.id()|string %}
+	<form method="post" action="/student/edit/{{ s.key.id() }}">
+	<tr>
+		<td>
+		<strong>Name:</strong>
+		</td>
+		<td>
+		<center><input type="text" name="first" value="{{ s.first }}"></center>
+		</td>
+		<td>
+		<center><input type="text" name="last" value="{{ s.last }}"></center>
+		</td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<center><strong>First Name</strong></center>
+	</td>
+	<td>
+	<center><strong>Last Name</strong></center>
+	</td>
+	</tr>
+	<tr>
+		<td>
+		<strong>Student No.:</strong>
+		</td>
+		<td>
+		<center><input type="text" name="studno" value="{{ s.studno }}"></center>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<strong>Email Address:</strong>
+		</td>
+		<td>
+		<input type="email" name="emailadd" value="{{ s.emailadd }}">
+		</td>
+		<td></td><td></td>
+		<td><p align="right"><input class="btn" type="submit" value="Save"><a class="btn" href="/student/list">Cancel</a></p></td>
+	</tr>
+	</form>
+		{% endif %}
+	{% endfor %}
+	</table>
+	</td></tr>
+	</table>
+</body>
+</html>
